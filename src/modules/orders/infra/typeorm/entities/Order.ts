@@ -24,6 +24,7 @@ class Order {
 
   @OneToMany(() => OrdersProducts, order_products => order_products.order, {
     eager: true,
+    cascade: true,
   })
   order_products: OrdersProducts[];
 

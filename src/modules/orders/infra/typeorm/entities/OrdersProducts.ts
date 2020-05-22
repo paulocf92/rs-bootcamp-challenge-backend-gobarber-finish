@@ -19,14 +19,14 @@ class OrdersProducts {
   @Column()
   order_id: string;
 
-  @ManyToOne(() => Order, order => order.order_products)
+  @ManyToOne(() => Order)
   @JoinColumn({ name: 'order_id' })
   order: Order;
 
   @Column()
   product_id: string;
 
-  @ManyToOne(() => Product, product => product.order_products)
+  @ManyToOne(() => Product)
   @JoinColumn({ name: 'product_id' })
   product: Product;
 
